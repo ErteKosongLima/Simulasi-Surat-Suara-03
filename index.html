@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#164734">
+  <title>Surat Suara Digital | Pilkades Ciater</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="ballot-frame" aria-labelledby="ballot-title">
+      <header class="ballot-header">
+        <img id="election-logo" class="election-logo" src="assets/logo.png" alt="Logo pemilihan">
+        <p class="eyebrow" id="election-name">PEMILIHAN KEPALA DESA CIATER</p>
+        <h1 id="ballot-title">SURAT SUARA</h1>
+        <div class="header-meta">
+          <span id="village-name">DESA CIATER</span>
+          <span class="meta-dot">◆</span>
+          <span id="district-regency">KECAMATAN CIATER · KABUPATEN SUBANG</span>
+        </div>
+        <p class="term-line">MASA BAKTI <strong id="term">2027–2035</strong></p>
+        <div class="gold-rule"><span></span></div>
+        <p class="instruction" id="instruction">Silakan pilih satu calon kepala desa. Mode sosialisasi: pilihan dapat diulang berkali-kali.</p>
+      </header>
+
+      <section id="ballot-view" class="view" aria-label="Daftar kandidat">
+        <div id="candidate-grid" class="candidate-grid"></div>
+        <p class="ballot-footnote"><span class="seal-dot">✓</span> SIMULASI KERTAS SUARA DIGITAL</p>
+      </section>
+
+      <section id="confirm-view" class="view hidden" aria-labelledby="confirm-title">
+        <div class="stage-label"><span>TAHAP 2</span> KONFIRMASI PILIHAN</div>
+        <div class="confirmation-card">
+          <div class="confirmation-candidate" id="selected-candidate"></div>
+          <h2 id="confirm-title">APAKAH ANDA YAKIN AKAN MEMILIH CALON INI?</h2>
+          <p>Pastikan pilihan Anda sudah benar sebelum melanjutkan.</p>
+          <div class="confirm-actions">
+            <button type="button" class="button button-secondary" id="back-button">ULANGI / KEMBALI</button>
+            <button type="button" class="button button-primary" id="confirm-button">YA, PILIH CALON INI</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="success-view" class="view hidden" aria-live="polite">
+        <div class="success-card">
+          <div class="success-mark" aria-hidden="true">✓</div>
+          <p class="success-kicker">PILIHAN TERSIMPAN</p>
+          <h2 id="thank-you-message">TERIMA KASIH, PILIHAN ANDA TELAH TERCATAT.</h2>
+          <p class="success-note">Pilihan simulasi ditampilkan di bawah. Anda dapat mengulangi pemilihan untuk mencoba kandidat lain.</p>
+          <div id="receipt-candidate" class="receipt-candidate"></div>
+          <div class="confirm-actions repeat-actions">
+            <button type="button" class="button button-primary" id="repeat-button">ULANGI SIMULASI</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="ballot-footer">
+        <span>PEMILIHAN KEPALA DESA CIATER</span>
+        <span class="footer-separator">•</span>
+        <span>SIMULASI E-VOTING</span>
+      </footer>
+    </section>
+    <p class="demo-note">Aplikasi ini merupakan simulasi edukasi. Pilihan tersimpan hanya pada sesi browser saat ini dan bukan sistem pemungutan suara resmi.</p>
+  </main>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
